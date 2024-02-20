@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_std"
+    tools:context=".unsignedMenu.education.EducationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/category_a_edu"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/category_a_edu"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:padding="10dp"
+            android:text="Подготовка водителей категории A"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/category_a_edu"
+            app:layout_constraintEnd_toEndOf="@+id/category_a_edu"
+            app:layout_constraintStart_toStartOf="@+id/category_a_edu"
+            app:layout_constraintTop_toTopOf="@+id/category_a_edu" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:text="Как пройти обучение вождению на мотоцикле?"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category_a_edu"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="651dp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Права категории А дают вам возможность водить мотоцикл, рабочий объем двигателя которого не превышает 125 см3 и мощность которого не превышает 11 кВт, с максимальной скоростью не менее 90 км / ч. Получить права на мотоцикл можно с 16 лет. Обучение на права категории А1 и АМ не требуется, если вы получите водительское удостоверение категории А.
+            \n\nЗнания и навыки, необходимые для управления мотоциклом, можно получить самостоятельно, однако, если вы хотите чувствовать себя в безопасности во время обучения, мы предлагаем записаться на обучение на права категории А.
+            \n\nПолучить права на мотоцикл можно в ГАИ после обучения вождению и сдаче теоретического и практического экзаменов. Тест по теории состоит из 10 вопросов. Чтобы сдать тестирование, вам нужно допустить не более 1 ошибки. Экзамен по вождению проверяет ваши навыки на практике. Вам будет предложено выполнить требуемые элементы на специальной площадке. При успешном прохождении всех испытаний вы можете считать, что успешно усвоили уроки вождения мотоцикла."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView1"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="651dp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="Мотошкола в Минске «Cadet»"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+        <TextView
+            android:id="@+id/textView4.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Если вы хотите взять уроки вождения мотоцикла с нуля или пройти переподготовку с Б на А, вам стоит обратиться в мотошколу. Опытные инструкторы автошколы «Все категории» помогут вам чувствовать себя увереннее на дороге, дадут нужные знания и навыки для безопасного вождения. Преимущества нашей автошколы также включают:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView3"/>
+
+        <TextView
+            android:id="@+id/textView4.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView4.1"
+            android:text="      • Обучение в рассрочку
+            \n      • Бесплатная пересдача зачетов
+            \n      • Шаговая доступность учебных классов
+            \n      • Уроки вождения по выходным
+            \n      • Возможность проходить обучение индивидуально
+            \n      • Планирование графика вождения вместе с курсантом"/>
+
+        <TextView
+            android:id="@+id/textView4.3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView4.2"
+            android:text="Курсы вождения мотоцикла в Минске в автошколе «Cadet» дадут вам возможность называть себя полноценным водителем."/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zapis_btn"
+            android:layout_width="192dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            app:cornerRadius="25dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:text="@string/zapis_text"
+            android:contextClickable="true"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4.3"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

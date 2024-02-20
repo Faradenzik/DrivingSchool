@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="330dp"
+    android:layout_gravity="center"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#EE2C2B2B"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/profile_im"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/standart_profile_im" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/coursant_FIO"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Фамилия Имя Отчество"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CardView" />
+
+            <ImageView
+                android:id="@+id/rectanglePhone"
+                android:layout_width="230dp"
+                android:layout_height="49dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/rectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/coursant_FIO" />
+
+            <TextView
+                android:id="@+id/coursant_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:autoLink="phone"
+                android:textColorLink="@color/skyblue"
+                android:text="+375293659622"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectanglePhone"
+                app:layout_constraintStart_toStartOf="@+id/rectanglePhone"
+                app:layout_constraintTop_toTopOf="@+id/rectanglePhone" />
+
+            <ImageView
+                android:id="@+id/rectangleEmail"
+                android:layout_width="230dp"
+                android:layout_height="49dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/rectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectanglePhone" />
+
+            <TextView
+                android:id="@+id/coursant_email"
+                android:layout_width="204dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="13dp"
+                android:autoLink="email"
+                android:textColorLink="@color/skyblue"
+                android:minHeight="48dp"
+                android:gravity="center_vertical"
+                android:text="gagaga@gmail.com"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectangleEmail"
+                app:layout_constraintStart_toStartOf="@+id/rectangleEmail"
+                app:layout_constraintTop_toTopOf="@+id/rectangleEmail" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setGrade"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/red"
+                android:text="Выставить зачет"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectangleEmail"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setLesson"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/red"
+                android:text="Назначить занятие"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/setGrade" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

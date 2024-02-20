@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_std"
+    tools:context=".unsignedMenu.prices.PricesActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/prices_im"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:src="@drawable/prices"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prices_main"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/prices_im"
+            app:layout_constraintEnd_toEndOf="@+id/prices_im"
+            app:layout_constraintStart_toStartOf="@+id/prices_im"
+            app:layout_constraintTop_toTopOf="@+id/prices_im" />
+
+        <ImageView
+            android:id="@+id/backA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prices_im"
+            app:srcCompat="@drawable/rectanglebacklong" />
+
+        <TextView
+            android:id="@+id/textA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/prepare_a"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backA" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/backA1"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:layout_width="240dp"
+            android:layout_height="140dp"
+            app:cardBackgroundColor="@color/prices_field"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/backA"
+            app:layout_constraintStart_toStartOf="@+id/backA"
+            app:layout_constraintTop_toBottomOf="@+id/textA">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/textA1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/groupAM"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/priceAmA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:text="@string/priceAmA"
+                    android:textColor="@color/white"
+                    android:textSize="60sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textA1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/backA2"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:layout_width="240dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/prices_field"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/backA"
+            app:layout_constraintStart_toStartOf="@+id/backA"
+            app:layout_constraintTop_toBottomOf="@+id/backA1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textA21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/groupPM"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/pricePmA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="90dp"
+                    android:text="@string/pricePmA"
+                    android:textColor="@color/white"
+                    android:textSize="60sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textA21" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zapisA_btn"
+            android:layout_width="192dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            app:cornerRadius="25dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:text="@string/zapis_text"
+            android:contextClickable="true"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/backA"
+            app:layout_constraintEnd_toEndOf="@id/backA"
+            app:layout_constraintStart_toStartOf="@id/backA"/>
+
+
+        <ImageView
+            android:id="@+id/backB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backA"
+            app:srcCompat="@drawable/rectanglebacklong" />
+
+        <TextView
+            android:id="@+id/textB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/prepare_b"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backB" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/backB1"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:layout_width="240dp"
+        android:layout_height="140dp"
+        app:cardBackgroundColor="@color/prices_field"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/backB"
+        app:layout_constraintStart_toStartOf="@+id/backB"
+        app:layout_constraintTop_toBottomOf="@+id/textB">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textB1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/groupAM"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/priceAmB"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="@string/priceAmB"
+                android:textColor="@color/white"
+                android:textSize="60sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textB1"/>
+
+            <TextView
+                android:id="@+id/fuelpriceAmB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_fuel"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/priceAmB"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/backB2"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:layout_width="240dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/prices_field"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="@id/backB"
+        app:layout_constraintStart_toStartOf="@id/backB"
+        app:layout_constraintTop_toBottomOf="@id/backB1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textB2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/groupPM"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pricePmB"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="@string/pricePmB"
+                android:textColor="@color/white"
+                android:textSize="60sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textB2" />
+
+            <TextView
+                android:id="@+id/fuelpricePmB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_fuel"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/pricePmB"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zapisB_btn"
+            android:layout_width="192dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            app:cornerRadius="25dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:text="@string/zapis_text"
+            android:contextClickable="true"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/backB"
+            app:layout_constraintEnd_toEndOf="@id/backB"
+            app:layout_constraintStart_toStartOf="@id/backB"/>
+
+        <ImageView
+            android:id="@+id/backVip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rectangleback"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backB"/>
+
+        <TextView
+            android:id="@+id/textVip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/prepare_vip"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backVip" />
+
+        <ImageView
+            android:id="@+id/backVip1"
+            android:layout_width="240dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/backVip"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/backVip"
+            app:layout_constraintTop_toBottomOf="@+id/textVip"
+            app:srcCompat="@drawable/rectanglebig" />
+
+        <TextView
+            android:id="@+id/textVip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/prepare_vip"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/backVip1"
+            app:layout_constraintStart_toStartOf="@+id/backVip1"
+            app:layout_constraintTop_toTopOf="@+id/backVip1" />
+
+        <TextView
+            android:id="@+id/priceVip"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="@string/priceVip"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="@+id/backVip1"
+            app:layout_constraintEnd_toEndOf="@+id/backVip1"
+            app:layout_constraintStart_toStartOf="@+id/backVip1"
+            app:layout_constraintTop_toBottomOf="@+id/textVip1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/fuelpriceVip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price_fuel"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/priceVip"
+            app:layout_constraintStart_toStartOf="@id/backVip1"
+            app:layout_constraintEnd_toEndOf="@id/backVip1"
+            app:layout_constraintBottom_toBottomOf="@id/backVip1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zapisVip_btn"
+            android:layout_width="192dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            app:cornerRadius="25dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:text="@string/zapis_text"
+            android:contextClickable="true"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/backVip"
+            app:layout_constraintEnd_toEndOf="@id/backVip"
+            app:layout_constraintStart_toStartOf="@id/backVip"/>
+
+        <TextView
+            android:id="@+id/zapisViptxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zapis_text"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/zapisVip_btn"
+            app:layout_constraintEnd_toEndOf="@+id/zapisVip_btn"
+            app:layout_constraintStart_toStartOf="@+id/zapisVip_btn"
+            app:layout_constraintTop_toTopOf="@+id/zapisVip_btn" />
+
+        <ImageView
+            android:id="@+id/backAddD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rectangleback"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/backVip" />
+
+        <TextView
+            android:id="@+id/textAddD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/prepare_addD"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backAddD" />
+
+        <ImageView
+            android:id="@+id/backAddD1"
+            android:layout_width="240dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/backAddD"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/backAddD"
+            app:layout_constraintTop_toBottomOf="@+id/textAddD"
+            app:srcCompat="@drawable/rectanglebig" />
+
+        <TextView
+            android:id="@+id/textAddD1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="@string/addDriving_text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/backAddD1"
+            app:layout_constraintStart_toStartOf="@+id/backAddD1"
+            app:layout_constraintTop_toTopOf="@+id/backAddD1" />
+
+        <TextView
+            android:id="@+id/priceAddD"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:text="@string/price_addD"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="@+id/backAddD1"
+            app:layout_constraintEnd_toEndOf="@+id/backAddD1"
+            app:layout_constraintStart_toStartOf="@+id/backAddD1"
+            app:layout_constraintTop_toBottomOf="@+id/textAddD1"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zapisAddD_btn"
+            android:layout_width="192dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            app:cornerRadius="25dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:text="@string/zapis_text"
+            android:contextClickable="true"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="@id/backAddD"
+            app:layout_constraintEnd_toEndOf="@id/backAddD"
+            app:layout_constraintStart_toStartOf="@id/backAddD"/>
+
+        <TextView
+            android:id="@+id/zapisAddDtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zapis_text"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/zapisAddD_btn"
+            app:layout_constraintEnd_toEndOf="@+id/zapisAddD_btn"
+            app:layout_constraintStart_toStartOf="@+id/zapisAddD_btn"
+            app:layout_constraintTop_toTopOf="@+id/zapisAddD_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

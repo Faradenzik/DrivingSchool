@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profile"
+        android:title="@string/profile_item"
+        android:icon="@drawable/person"/>
+    <item
+        android:id="@+id/gradebook"
+        android:title="@string/gradebook_item"
+        android:icon="@drawable/gradebook"/>
+    <item
+        android:id="@+id/timetable"
+        android:title="@string/timetable_item"
+        android:icon="@drawable/timetable"/>
+</menu>

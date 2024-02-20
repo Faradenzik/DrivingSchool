@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "678112186784",
+    "project_id": "driving-school-cadet",
+    "storage_bucket": "driving-school-cadet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678112186784:android:0283de1e31b82a5a8ed4c5",
+        "android_client_info": {
+          "package_name": "com.coursework.drivingschool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678112186784-31usa3gjmip97tv83ovmdulj09enf8mi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coursework.drivingschool",
+            "certificate_hash": "63cf99051b94b18f642b97cc57cb7a1d66dd53d3"
+          }
+        },
+        {
+          "client_id": "678112186784-7ffqsakejndebdl8t6st7rlnep8vg22v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoUMXm43LI0M5n3LnyBYxFXrtiuruSzOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678112186784-7ffqsakejndebdl8t6st7rlnep8vg22v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

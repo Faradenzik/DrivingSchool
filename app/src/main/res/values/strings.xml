@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Cadet Driving School</string>
+
+
+    // Login Activity
+    <string name="auth_btn">Войти</string>
+    <string name="auth_text">Авторизация</string>
+    <string name="auth_mail_hint">Е-mail</string>
+    <string name="auth_pass_hint">Пароль</string>
+    <string name="empty_fields_err">Заполните все поля!</string>
+    <string name="auth_err">Ошибка авторизации</string>
+
+
+    // Register Activity
+    <string name="reg_text">Регистрация</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="surname">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="patronomic">Отчество</string>
+    <string name="birthDate">Дата рождения</string>
+    <string name="phone">Тел.</string>
+    <string name="email">E-mail</string>
+    <string name="password">Пароль</string>
+    <string name="succ_reg">Заявка отправлена!</string>
+    <string name="reg_err">Ошибка. Повторите попытку</string>
+
+
+    // Main menu bar
+    <string name="profile_item">Профиль</string>
+    <string name="menu_item">Меню</string>
+    <string name="gradebook_item">Зачётка</string>
+    <string name="timetable_item">Расписание</string>
+    <string name="group_item">Группа</string>
+
+
+    // Education Activity bar
+    <string name="categoryB_item">Категория В</string>
+    <string name="categoryA_item">Категория А</string>
+    <string name="vipEduc_item">Вип-Обучение</string>
+    <string name="dopDriving_item">Доп. Вождение</string>
+
+    <string name="zach1">Зачет 1</string>
+    <string name="zach2">Зачет 2</string>
+    <string name="zach3">Зачет 3</string>
+    <string name="zach4">Зачет 4</string>
+    <string name="zach5">Зачет 5</string>
+
+
+    // Prices Activity
+    <string name="prices_main">Стоимость</string>
+    <string name="prepare_a">Переподготовка на А</string>
+    <string name="groupAM">Утренняя группа</string>
+    <string name="priceAmA">300р</string>
+    <string name="groupPM">Вечерняя группа</string>
+    <string name="pricePmA">350р</string>
+    <string name="zapis_text">Записаться</string>
+    <string name="prepare_b">Категория B</string>
+    <string name="priceAmB">800р</string>
+    <string name="price_fuel">+240р за топливо</string>
+    <string name="pricePmB">850р</string>
+    <string name="prepare_vip">VIP-Обучение</string>
+    <string name="priceVip">1230р</string>
+    <string name="prepare_addD">Дополнительное вождение</string>
+    <string name="addDriving_text">Дополнительное занятие\n по вождению</string>
+    <string name="price_addD">45р</string>
+
+
+    // Popup menu
+    <string name="groupTypeAM">Утренняя</string>
+    <string name="groupTypePM">Вечерняя</string>
+    <string name="groupTypeVIP">ВИП</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

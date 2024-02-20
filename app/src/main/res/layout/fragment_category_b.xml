@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_std"
+    tools:context=".unsignedMenu.education.EducationActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/category_b_edu"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/category_b_edu" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"
+            android:padding="10dp"
+            android:text="Подготовка водителей категории В"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/category_b_edu"
+            app:layout_constraintEnd_toEndOf="@+id/category_b_edu"
+            app:layout_constraintStart_toStartOf="@+id/category_b_edu"
+            app:layout_constraintTop_toTopOf="@+id/category_b_edu" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:text="Как получить водительское удостоверение категории B?"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category_b_edu"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="651dp"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Водительские права уже давно не роскошь, а необходимость в современном мире. Вождение автомобиля дает вам независимость и свободу, возможность добраться в любую точку в любой момент времени, а также просто удобный способ передвигаться от дома до работы или учебы.\n\nЧтобы получить права на машину категории B, вам нужно пройти обучение вождению в автошколе. Получение водительских прав позволяет вам управлять обычными пассажирскими транспортными средствами категории B (менее 3,5 тонн). Умение водить автомобиль – важный навык, который дает вам свободу от общественного транспорта. Водительские права выдаются ГАИ с 18 лет, вам необходимо обновлять их каждые 10 лет."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView1"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="651dp"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="Процесс получения прав категории B в автошколе «Cadet»"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+
+        <TextView
+            android:id="@+id/textView4.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Вам может показаться, что для того чтобы сдать на права, потребуется много времени, но не стоит негативно относиться к этому процессу.
+            \n\nНаши дружелюбные и опытные инструкторы по вождению помогут вам стать хорошим водителем и чувствовать себя уверенно на дороге. Наши уроки по вождению в Минске помогут вам подготовиться к экзамену и успешно пройти его в ГАИ.
+            \n\nЗаписавшись на курсы вождения в автошколу «Cadet», вы получите следующие преимущества:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView3"/>
+
+        <TextView
+            android:id="@+id/textView4.2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView4.1"
+            android:text="      • Рассрочка платежа за курсы вождения
+            \n      • Удобное расположение учебных классов
+            \n      • Согласование графиков вождения и возможность учиться в автошколе в выходные дни
+            \n      • Возможно индивидуальное обучение на права
+            \n      • Предоставление в ГАИ автомобиля, на котором проходила ваша учебная практика
+            \n      • Возможность выбора автомобиля (оплачивается отдельно)"/>
+
+        <TextView
+            android:id="@+id/textView4.3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView4.2"
+            android:text="Когда все этапы будут пройдены, вы можете считать, что вы прошли обучение на категорию Б и теперь сможете управлять собственным автомобилем."/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/zapis_btn"
+            android:layout_width="192dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            app:cornerRadius="25dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/red"
+            android:text="@string/zapis_text"
+            android:contextClickable="true"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4.3"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

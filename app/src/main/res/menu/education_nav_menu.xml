@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/categoryB"
+        android:title="@string/categoryB_item"
+        android:icon="@drawable/car"/>
+    <item
+        android:id="@+id/categoryA"
+        android:title="@string/categoryA_item"
+        android:icon="@drawable/bike"/>
+    <item
+        android:id="@+id/vipEduc"
+        android:title="@string/vipEduc_item"
+        android:icon="@drawable/vip"/>
+    <item
+        android:id="@+id/addDriving"
+        android:title="@string/dopDriving_item"
+        android:icon="@drawable/wheel"/>
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_std">#17181a</color>
+    <color name="red">#6A0404</color>
+    <color name="black">#FF000000</color>
+    <color name="bottom_nav">#2C2B2B</color>
+    <color name="for_fields">#272727</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="skyblue">#05BDFA</color>
+    <color name="littleInRec">#C1C1C1</color>
+    <color name="green">#16C600</color>
+    <color name="prices_field">#31333C</color>
+    <color name="prices_field_click">#4A4D59</color>
+</resources>

@@ -1,0 +1,406 @@
+@startuml
+class com.coursework.drivingschool.unsignedMenu.education.CategoryB {
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+}
+class com.coursework.drivingschool.objects.DrivingGroup {
+- int id
+- String month
+- String type
+- String category
+- String teacherId
++ int getId()
++ void setId(int)
++ String getMonth()
++ void setMonth(String)
++ String getType()
++ void setType(String)
++ String getCategory()
++ void setCategory(String)
++ String getTeacherId()
++ void setTeacherId(String)
+}
+class com.coursework.drivingschool.teacherMenu.GroupFragment {
+- CoursantAdapter adapter
+- List<Coursant> coursants
+- int groupId
+- Dialog dialog
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void setInitialData()
+}
+class com.coursework.drivingschool.unsignedMenu.teachers.TeachersList {
+- List<Teacher> teachers
+- TeacherAdapter adapter
+# void onCreate(Bundle)
+- void setInitialData()
+}
+class com.coursework.drivingschool.roles.Teacher {
+- String Uid
+- String surname
+- String name
+- String patronomyc
+- String phone
+- String email
+- String url_im
+- int groupId
++ String getUid()
++ void setUid(String)
++ String getName()
++ void setName(String)
++ String getSurname()
++ void setSurname(String)
++ String getPatronomyc()
++ void setPatronomyc(String)
++ String getPhone()
++ void setPhone(String)
++ String getEmail()
++ void setEmail(String)
++ String getUrl_im()
++ void setUrl_im(String)
++ int getGroupId()
++ void setGroupId(int)
+}
+class com.coursework.drivingschool.MainActivity {
+- FirebaseAuth auth
+- List<String> ids
+# void onCreate(Bundle)
+}
+class com.coursework.drivingschool.coursantMenu.LessonCoursantAdapter {
+- Context context
+- List<Lesson> lessons
++ LessonViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(LessonViewHolder,int)
++ int getItemCount()
+}
+class com.coursework.drivingschool.coursantMenu.LessonCoursantAdapter.LessonViewHolder {
+~ TextView timeView
+~ TextView dateView
+}
+class com.coursework.drivingschool.unsignedMenu.groups.GroupsList {
+- List<DrivingGroup> groups
+- GroupAdapter adapter
+- int id
+# void onCreate(Bundle)
++ void catClick(View)
++ void positiveClick()
+- void setInitialData()
+# void onActivityResult(int,int,Intent)
+}
+class com.coursework.drivingschool.coursantMenu.MenuCoursantActivity {
+- FirebaseAuth auth
+- TimetableCoursantFragment timetableFragment
+- ProfileCoursantFragment profileFragment
+- GradebookFragment gradebookFragment
+# void onCreate(Bundle)
++ boolean onNavigationItemSelected(MenuItem)
+# void onActivityResult(int,int,Intent)
+}
+class com.coursework.drivingschool.LoginActivity {
+- Button auth_btn
+- EditText userEmail
+- EditText userPassword
+- FirebaseAuth auth
+- FirebaseDatabase mDatabase
+# void onCreate(Bundle)
+}
+class com.coursework.drivingschool.teacherMenu.LessonTeacherAdapter {
+- OnLessonClickListener onClickListener
+- Context context
+- List<Lesson> lessons
++ LessonViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(LessonViewHolder,int)
++ int getItemCount()
+}
+interface com.coursework.drivingschool.teacherMenu.LessonTeacherAdapter.OnLessonClickListener {
+~ void onLessonClick(Lesson,int)
+}
+class com.coursework.drivingschool.teacherMenu.LessonTeacherAdapter.LessonViewHolder {
+~ TextView timeView
+~ TextView dateView
+}
+class com.coursework.drivingschool.teacherMenu.SetLessonActivity {
+- MaterialButton dateSet
+- MaterialButton timeSet
+- List<Lesson> lessons
+~ FirebaseAuth auth
+- DatabaseReference data
+~ Calendar dateAndTime
+~ int day
+- MaterialButton add_btn
+~ TimePickerDialog.OnTimeSetListener t
+~ DatePickerDialog.OnDateSetListener d
+# void onCreate(Bundle)
++ void setDate(View)
++ void setTime(View)
+- void setInitialDate()
+- void setInitialTime()
+}
+class com.coursework.drivingschool.unsignedMenu.education.CategoryA {
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+}
+class com.coursework.drivingschool.teacherMenu.ProfileTeacherFragment {
+- FirebaseAuth auth
+- FirebaseDatabase mDatabase
+- DatabaseReference data
+- Dialog dialog
+- TextView name
+- TextView surname
+- TextView patronomyc
+- TextView phone
+- TextView email
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void showEmailChangeDialog()
+- void showPhoneChangeDialog()
+}
+class com.coursework.drivingschool.roles.Coursant {
+- String Uid
+- String surname
+- String name
+- String patronomyc
+- String phone
+- String birthday
+- String email
+- String grades
+- int groupId
++ String getUid()
++ void setUid(String)
++ String getSurname()
++ void setSurname(String)
++ String getName()
++ void setName(String)
++ String getPatronomyc()
++ void setPatronomyc(String)
++ String getPhone()
++ void setPhone(String)
++ String getBirthday()
++ void setBirthday(String)
++ String getEmail()
++ void setEmail(String)
++ String getGrades()
++ void setGrades(String)
++ int getGroupId()
++ void setGroupId(int)
+}
+class com.coursework.drivingschool.coursantMenu.ProfileCoursantFragment {
+- FirebaseAuth auth
+- FirebaseDatabase mDatabase
+- DatabaseReference data
+- Dialog dialog
+- TextView name
+- TextView surname
+- TextView patronomyc
+- TextView birthday
+- TextView phone
+- TextView email
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void showEmailChangeDialog()
+- void showPhoneChangeDialog()
+}
+class com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter {
+- OnGroupClickListener onClickListener
+- LayoutInflater inflater
+- List<DrivingGroup> groups
+~ String url
++ GroupViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(GroupViewHolder,int)
++ void teachFIO(String,bip)
++ int getItemCount()
++ void onAttachedToRecyclerView(RecyclerView)
+}
+interface com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter.bip {
++ void execute(String)
+}
+interface com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter.OnGroupClickListener {
+~ void onGroupClick(DrivingGroup,int)
+}
+class com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter.GroupViewHolder {
+~ ImageView category
+~ ImageView teacher_im
+~ TextView month
+~ TextView type
+~ TextView teacherFIO
+}
+class com.coursework.drivingschool.teacherMenu.CoursantAdapter {
+- List<Coursant> coursants
+- LayoutInflater inflater
+- CoursantAdapter.OnCoursantClickListener onClickListener
++ CoursantsViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(CoursantsViewHolder,int)
++ int getItemCount()
++ void onAttachedToRecyclerView(RecyclerView)
+}
+interface com.coursework.drivingschool.teacherMenu.CoursantAdapter.OnCoursantClickListener {
+~ void onCoursantClick(Coursant,int)
+}
+class com.coursework.drivingschool.teacherMenu.CoursantAdapter.CoursantsViewHolder {
+~ ImageView coursant_im
+~ TextView coursant_FIO
+}
+class com.coursework.drivingschool.teacherMenu.SetGradeActivity {
+- FirebaseDatabase mDatabase
+- DatabaseReference data
+- String grades
+# void onCreate(Bundle)
+}
+class com.coursework.drivingschool.unsignedMenu.prices.PricesActivity {
+- CardView backA1
+- CardView backA2
+- CardView backB1
+- CardView backB2
+- int typeA
+- int typeB
+# void onCreate(Bundle)
++ void onClick(View)
+}
+class com.coursework.drivingschool.coursantMenu.GradebookFragment {
+- FirebaseAuth auth
+- DatabaseReference data
+- TextView grade1
+- TextView grade2
+- TextView grade3
+- TextView grade4
+- TextView grade5
+- TextView grade6
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+}
+class com.coursework.drivingschool.RegisterActivity {
+- FirebaseAuth reg
+- DatabaseReference data
+- DatabaseReference refG
+~ int group
+- EditText personSurname
+- EditText personName
+- EditText personPatronomyc
+- EditText personBirthday
+- EditText personPhone
+- EditText personEmail
+- EditText personPassword
+- Calendar dateAndTime
+~ DatePickerDialog.OnDateSetListener d
++ void setDate(View)
+- void setInitialDateTime()
+# void onCreate(Bundle)
+}
+class com.coursework.drivingschool.teacherMenu.MenuTeacherActivity {
+- ProfileTeacherFragment profileFragment
+- GroupFragment groupFragment
+- TimetableTeacherFragment timetableFragment
+# void onCreate(Bundle)
++ boolean onNavigationItemSelected(MenuItem)
+}
+class com.coursework.drivingschool.objects.Lesson {
+- String date
+- String time
+- String teacherId
+- String coursantId
++ String getTeacherId()
++ void setTeacherId(String)
++ String getCoursantId()
++ void setCoursantId(String)
++ String getDate()
++ void setDate(String)
++ String getTime()
++ void setTime(String)
+}
+class com.coursework.drivingschool.unsignedMenu.MenuActivity {
+# void onCreate(Bundle)
+# void onActivityResult(int,int,Intent)
+}
+class com.coursework.drivingschool.coursantMenu.TimetableCoursantFragment {
+- FirebaseAuth auth
+- List<Lesson> lessons
+- LessonCoursantAdapter adapter
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void setInitialData()
+}
+class com.coursework.drivingschool.unsignedMenu.groups.MyDialogFragment {
++ Dialog onCreateDialog(Bundle)
+}
+class com.coursework.drivingschool.unsignedMenu.teachers.TeacherAdapter {
+- LayoutInflater inflater
+- List<Teacher> teachers
++ TeacherViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(TeacherViewHolder,int)
++ int getItemCount()
++ void onAttachedToRecyclerView(RecyclerView)
+}
+class com.coursework.drivingschool.unsignedMenu.teachers.TeacherAdapter.TeacherViewHolder {
+~ ImageView profile_im
+~ TextView surname
+~ TextView name
+~ TextView patronomyc
+~ TextView phone
+}
+class com.coursework.drivingschool.teacherMenu.TimetableTeacherFragment {
+- FirebaseAuth auth
+- List<Lesson> lessons
+- List<Coursant> coursants
+- LessonTeacherAdapter adapter
+- Dialog dialog
+- FirebaseDatabase mDatabase
+- DatabaseReference refL
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+- void setInitialData()
+}
+class com.coursework.drivingschool.unsignedMenu.education.EducationActivity {
+~ BottomNavigationView educationNavigationView
+~ CategoryB categoryB
+~ CategoryA categoryA
+~ Vip vip
+~ AdditionalDriving addDrive
+# void onCreate(Bundle)
++ boolean onNavigationItemSelected(MenuItem)
+}
+class com.coursework.drivingschool.unsignedMenu.education.Vip {
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+}
+class com.coursework.drivingschool.unsignedMenu.education.AdditionalDriving {
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
+}
+
+
+androidx.fragment.app.Fragment <|-- com.coursework.drivingschool.unsignedMenu.education.CategoryB
+androidx.fragment.app.Fragment <|-- com.coursework.drivingschool.teacherMenu.GroupFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.unsignedMenu.teachers.TeachersList
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.MainActivity
+com.coursework.drivingschool.coursantMenu.Adapter <|-- com.coursework.drivingschool.coursantMenu.LessonCoursantAdapter
+com.coursework.drivingschool.coursantMenu.LessonCoursantAdapter +.. com.coursework.drivingschool.coursantMenu.LessonCoursantAdapter.LessonViewHolder
+com.coursework.drivingschool.coursantMenu.ViewHolder <|-- com.coursework.drivingschool.coursantMenu.LessonCoursantAdapter.LessonViewHolder
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.unsignedMenu.groups.GroupsList
+com.coursework.drivingschool.coursantMenu.OnNavigationItemSelectedListener <|.. com.coursework.drivingschool.coursantMenu.MenuCoursantActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.coursantMenu.MenuCoursantActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.LoginActivity
+com.coursework.drivingschool.teacherMenu.Adapter <|-- com.coursework.drivingschool.teacherMenu.LessonTeacherAdapter
+com.coursework.drivingschool.teacherMenu.LessonTeacherAdapter +.. com.coursework.drivingschool.teacherMenu.LessonTeacherAdapter.OnLessonClickListener
+com.coursework.drivingschool.teacherMenu.LessonTeacherAdapter +.. com.coursework.drivingschool.teacherMenu.LessonTeacherAdapter.LessonViewHolder
+com.coursework.drivingschool.teacherMenu.ViewHolder <|-- com.coursework.drivingschool.teacherMenu.LessonTeacherAdapter.LessonViewHolder
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.teacherMenu.SetLessonActivity
+androidx.fragment.app.Fragment <|-- com.coursework.drivingschool.unsignedMenu.education.CategoryA
+androidx.fragment.app.Fragment <|-- com.coursework.drivingschool.teacherMenu.ProfileTeacherFragment
+androidx.fragment.app.Fragment <|-- com.coursework.drivingschool.coursantMenu.ProfileCoursantFragment
+com.coursework.drivingschool.unsignedMenu.groups.Adapter <|-- com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter
+com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter +.. com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter.bip
+com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter +.. com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter.OnGroupClickListener
+com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter +.. com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter.GroupViewHolder
+com.coursework.drivingschool.unsignedMenu.groups.ViewHolder <|-- com.coursework.drivingschool.unsignedMenu.groups.GroupAdapter.GroupViewHolder
+com.coursework.drivingschool.teacherMenu.Adapter <|-- com.coursework.drivingschool.teacherMenu.CoursantAdapter
+com.coursework.drivingschool.teacherMenu.CoursantAdapter +.. com.coursework.drivingschool.teacherMenu.CoursantAdapter.OnCoursantClickListener
+com.coursework.drivingschool.teacherMenu.CoursantAdapter +.. com.coursework.drivingschool.teacherMenu.CoursantAdapter.CoursantsViewHolder
+com.coursework.drivingschool.teacherMenu.ViewHolder <|-- com.coursework.drivingschool.teacherMenu.CoursantAdapter.CoursantsViewHolder
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.teacherMenu.SetGradeActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.unsignedMenu.prices.PricesActivity
+androidx.fragment.app.Fragment <|-- com.coursework.drivingschool.coursantMenu.GradebookFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.RegisterActivity
+com.coursework.drivingschool.teacherMenu.OnNavigationItemSelectedListener <|.. com.coursework.drivingschool.teacherMenu.MenuTeacherActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.teacherMenu.MenuTeacherActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.unsignedMenu.MenuActivity
+androidx.fragment.app.Fragment <|-- com.coursework.drivingschool.coursantMenu.TimetableCoursantFragment
+androidx.fragment.app.DialogFragment <|-- com.coursework.drivingschool.unsignedMenu.groups.MyDialogFragment
+com.coursework.drivingschool.unsignedMenu.teachers.Adapter <|-- com.coursework.drivingschool.unsignedMenu.teachers.TeacherAdapter
+com.coursework.drivingschool.unsignedMenu.teachers.TeacherAdapter +.. com.coursework.drivingschool.unsignedMenu.teachers.TeacherAdapter.TeacherViewHolder
+com.coursework.drivingschool.unsignedMenu.teachers.ViewHolder <|-- com.coursework.drivingschool.unsignedMenu.teachers.TeacherAdapter.TeacherViewHolder
+androidx.fragment.app.Fragment <|-- com.coursework.drivingschool.teacherMenu.TimetableTeacherFragment
+com.coursework.drivingschool.unsignedMenu.education.OnNavigationItemSelectedListener <|.. com.coursework.drivingschool.unsignedMenu.education.EducationActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.coursework.drivingschool.unsignedMenu.education.EducationActivity
+androidx.fragment.app.Fragment <|-- com.coursework.drivingschool.unsignedMenu.education.Vip
+androidx.fragment.app.Fragment <|-- com.coursework.drivingschool.unsignedMenu.education.AdditionalDriving
+@enduml
